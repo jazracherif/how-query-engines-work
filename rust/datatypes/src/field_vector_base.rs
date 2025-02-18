@@ -3,16 +3,16 @@
 //! Implements the basic primitives needed to support a library's data type
 use crate::data_types::MyPrimitiveDataTypes;
 
-/// Libraries currently supported by this library
+/// Data Format supported by this data engine
 pub enum Format {
     ARROW,
 }
 
-/// This is the Array builder interface
+/// Basic interface for an array builder.
 pub trait MyArrayBuilderInterface {
     /// The type of builder
     const BUILDER_TYPE: Format;
-    /// Generic type name supported by *this* library
+    /// data type, this should 
     const DATA_TYPE: MyPrimitiveDataTypes;
     /// The type that will be returned once the builder is finished
     type ReturnTypeAtBuild;

@@ -22,12 +22,10 @@ pub enum MyPrimitiveDataTypes {
 // Boolean,
 // String,
 
-// this trait can be used by end user to request operation on certain types
 pub trait MyDataTypePrimitives {
     const DATA_TYPE: MyPrimitiveDataTypes;
 }
 
-// This macro creates new base data types.
 #[macro_export]
 macro_rules! make_base_type {
     ($name:ident, $data_type:expr,  $native_type:ty,  $doc_string: literal) => {

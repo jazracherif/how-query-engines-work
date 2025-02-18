@@ -1,7 +1,11 @@
+//! field_vector_factor.rs
+//! 
+//! This factory is the entrypoint for creating various kinds of array, and for different
+//! formats.
+
 use crate::field_vector_arrow::{MyArrowDataTypePrimitives, MyPrimitiveArrowArrayBuilder};
 use crate::field_vector_base::MyArrayBuilderInterface;
 
-/// This is the Array builder interface
 pub struct ArrayBuilderFactory {}
 impl ArrayBuilderFactory {
     /// Arrow Methods
